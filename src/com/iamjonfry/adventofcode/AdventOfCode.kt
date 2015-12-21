@@ -7,7 +7,8 @@ import java.util.*
  * Created by Jonathon Fry on 18/12/2015.
  */
 fun main(args: Array<String>) {
-    day1()
+    day1Part1()
+    day1Part2()
     day2()
     day3()
     day4()
