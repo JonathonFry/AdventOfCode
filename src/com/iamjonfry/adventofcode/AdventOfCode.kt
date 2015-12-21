@@ -9,7 +9,8 @@ import java.util.*
 fun main(args: Array<String>) {
     day1Part1()
     day1Part2()
-    day2()
+    day2Part1()
+    day2Part2()
     day3()
     day4()
     day5()
