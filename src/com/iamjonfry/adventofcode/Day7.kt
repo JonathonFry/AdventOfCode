@@ -102,3 +102,24 @@ fun eval(expression: String): Int {
     }
 
 }
+
+
+fun day7Part2() {
+    val scanner = openFile("day7")
+    while (scanner.hasNext()) {
+        val input = scanner.nextLine()
+
+        var split = input.split(" -> ")
+        expressions.put(split[1], split[0])
+        gates.put(split[1], -1)
+    }
+    val part1Output = eval(expressions["a"]!!)
+
+
+
+    gates.forEach { s, i -> gates.put(s, -1) }
+    gates.put("b", part1Output)
+
+    val part2Output = eval(expressions["a"]!!)
+    println("Day 7 Part 2: $part2Output")
+}
