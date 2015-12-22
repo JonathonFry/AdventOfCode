@@ -1,5 +1,6 @@
 package com.iamjonfry.adventofcode
 
+import org.apache.commons.lang3.StringEscapeUtils
 import java.util.regex.Pattern
 
 /**
@@ -27,4 +28,21 @@ fun day8Part1() {
     }
 
     println("Day 8 Part 1: ${totalCount - escapedCount}")
+}
+
+
+fun day8Part2() {
+    var totalCount = 0
+    var escapedCount = 0
+
+    val scanner = openFile("day8")
+    while (scanner.hasNext()) {
+        val input = scanner.nextLine()
+        totalCount += input.length
+
+        var escaped = StringEscapeUtils.escapeJava(input)
+        escaped = "\"$escaped\""
+        escapedCount += escaped.length
+    }
+    println("Day 8 Part 2: ${escapedCount - totalCount}")
 }
