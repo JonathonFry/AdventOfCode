@@ -7,9 +7,22 @@ package com.iamjonfry.adventofcode
 val chars = arrayOf("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
 val invalidChars = arrayOf("i", "o", "l")
 
-fun day11() {
+fun day11Part1() {
     var password = openFile("day11").next()
 
+    while (true) {
+        if (isValidPassword(password)) {
+            break
+        }
+        password = iteratePassword(password)
+    }
+
+    print(password)
+}
+
+
+fun day11Part2() {
+    var password = iteratePassword("vzbxxyzz")
     while (true) {
         if (isValidPassword(password)) {
             break
