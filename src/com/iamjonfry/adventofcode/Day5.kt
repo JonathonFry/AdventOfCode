@@ -81,14 +81,14 @@ private fun isNicePart2(string: String): Boolean {
             break
         var nextCharacter = string[i + 1]
 
-        val testString = character.toString().concat(nextCharacter.toString())
+        val testString = character.toString().plus(nextCharacter.toString())
 
         for ((j, subCharacter )in string.withIndex()) {
             if (j == string.length - 1)
                 break
             var nextSubCharacter = string[j + 1]
 
-            val testSubString = subCharacter.toString().concat(nextSubCharacter.toString())
+            val testSubString = subCharacter.toString().plus(nextSubCharacter.toString())
 
             if (testString.equals(testSubString, true) && i != j && i + 1 != j && i != j + 1) {
                 pairOfLetters = true

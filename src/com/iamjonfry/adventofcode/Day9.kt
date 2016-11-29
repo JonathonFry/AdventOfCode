@@ -41,7 +41,7 @@ fun day9() {
 
 fun solve(visited: ArrayList<String>, total: Int, key: String, locations: ArrayList<Pair<String, Int>>) {
     locations.forEachIndexed { i, it ->
-        if (!visited.containsRaw(it.first)) {
+        if (!visited.contains(it.first)) {
             var temp = ArrayList<String>(visited)
             temp.add(key)
             solve(temp, total + it.second, it.first, map[it.first]!!)
