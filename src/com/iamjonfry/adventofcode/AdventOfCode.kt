@@ -32,6 +32,8 @@ fun main(args: Array<String>) {
     day12Part2()
     day13Part1()
     day13Part2()
+    day14Part1()
+    day14Part1()
 }
 
 fun openFile(name: String): Scanner {
